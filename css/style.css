@@ -1,0 +1,373 @@
+:root {
+    --azul: #0a2540;
+    --azul-claro: #1e3a8a;
+    --aguamarina: #2dd4bf;
+    --fondo: #0076c5;
+    --blanco: #a0f9ff;
+    --texto: #0f172a;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(90deg, var(--azul), var(--aguamarina));
+    text-align: center;
+    padding: 2rem;
+    color: white;
+}
+
+.titulo span {
+    color: var(--aguamarina);
+}
+
+.nav-bg {
+    background-color: var(--blanco);
+    border-bottom: 1px solid #ddd;
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.navegacion-principal a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navegacion-principal a:hover {
+    color: var(--aguamarina);
+}
+
+.hero {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.boton {
+    background-color: var(--aguamarina);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sombra {
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.servicios {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+}
+
+.servicio img {
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: var(--azul-claro);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--azul);
+    color: white;
+    margin-top: 2rem;
+}
+
+.contenido-hero {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+}
+
+.contenido-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.personaje {
+    width: 250px;
+    text-align: center;
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.mundo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.mundo-card {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mundo-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.mundo-card img,
+.personaje img,
+.servicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.teorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.teoria {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.teoria img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.servicio,
+.personaje,
+.mundo-card,
+.teoria {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: aparecer 0.6s ease;
+}
+
+.servicio:hover,
+.personaje:hover,
+.mundo-card:hover,
+.teoria:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+}
+
+.servicio img,
+.personaje img,
+.mundo-card img,
+.teoria img {
+    transition: transform 0.3s ease;
+}
+
+.servicio:hover img,
+.personaje:hover img,
+.mundo-card:hover img,
+.teoria:hover img {
+    transform: scale(1.05);
+}
+
+.boton {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+    background-color: #0ea5e9;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navegacion-principal a {
+    position: relative;
+}
+
+.navegacion-principal a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #2dd4bf;
+    transition: width 0.3s ease;
+}
+
+.navegacion-principal a:hover::after {
+    width: 100%;
+}
+
+h2 {
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: #2dd4bf;
+    margin: 5px auto 0;
+    transition: width 0.3s;
+}
+
+h2:hover::after {
+    width: 80%;
+}
+
+.hero {
+    overflow: hidden;
+}
+
+.hero img {
+    transition: transform 5s ease;
+}
+
+.hero:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+    .navegacion-principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    .contenido-hero {
+        padding: 1rem;
+    }
+
+    .servicios,
+    .personajes,
+    .mundo,
+    .teorias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio,
+    .personaje,
+    .mundo-card,
+    .teoria {
+        width: 90%;
+    }
+
+    img {
+        height: auto;
+    }
+
+    form {
+        width: 90%;
+    }
+}
